@@ -27,3 +27,10 @@ Allow local PowerShell scripts for the current user:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Optionally compile to executable file if required by the caller of the script. Can be done using PowerShell module `PS2EXE`. 
+
+```powershell
+Install-Module -Name ps2exe
+Invoke-PS2EXE .\cycle-next-output.ps1 .\cycle-next-output.exe
